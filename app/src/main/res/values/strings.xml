@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Bravo</string>
+    <string name="txt_round_ups">Round-ups:</string>
+    <string name="txt_already_granted">Already have the permission to receive sms.</string>
+    <string name="txt_need_permission">Need permission to receive sms.</string>
+    <string name="txt_thank_you">Thank you.</string>
+    <string name="txt_work">App needs to receive sms to work.</string>
+</resources>

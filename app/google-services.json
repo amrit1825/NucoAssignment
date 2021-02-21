@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "654251575172",
+    "project_id": "bravo-fb295",
+    "storage_bucket": "bravo-fb295.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654251575172:android:fe48697dcbaa529ce97fd1",
+        "android_client_info": {
+          "package_name": "com.amrit.bravo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654251575172-na15h08h7sgsgq04n60cmshsvtn2bbhj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAf5qIuSEIrBKrybbJUSILUG9LKVsmMaPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "654251575172-na15h08h7sgsgq04n60cmshsvtn2bbhj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
