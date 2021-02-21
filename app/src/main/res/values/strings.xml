@@ -5,4 +5,6 @@
     <string name="txt_need_permission">Need permission to receive sms.</string>
     <string name="txt_thank_you">Thank you.</string>
     <string name="txt_work">App needs to receive sms to work.</string>
+    <string name="txt_amount">Amount :</string>
+    <string name="txt_time">Time stamp :</string>
 </resources>

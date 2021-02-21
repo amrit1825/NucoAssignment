@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="grey_200">#B0BEC5</color>
-    <color name="grey_500">#607D8B</color>
-    <color name="grey_700">#455A64</color>
+    <color name="purple_200">#B39DDB</color>
+    <color name="purple_500">#673AB7</color>
+    <color name="purple_700">#512DA8</color>
 
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
-    <color name="colorRoundUps">#9575CD</color>
     <color name="colorTitle">#FF9800</color>
 </resources>

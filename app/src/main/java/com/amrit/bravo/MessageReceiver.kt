@@ -9,7 +9,6 @@ import com.amrit.bravo.model.Message
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import java.sql.Timestamp
-import java.time.format.DateTimeFormatter
 
 const val TAG = "Receiver"
 const val PDU_TYPE = "pdus"
@@ -30,8 +29,16 @@ class MessageReceiver : BroadcastReceiver() {
                     smsList[i]?.let {
                         messageBody = it.messageBody
                         val messageValidator = MessageValidator()
-                        if (messageValidator.hasDate(messageBody) && messageValidator.hasAmount(messageBody)){
-                            writeDataToServer(Message(messageValidator.getAmount(), Timestamp(System.currentTimeMillis()).toString()))
+                        if (messageValidator.hasDate(messageBody) && messageValidator.hasAmount(
+                                messageBody
+                            )
+                        ) {
+                            writeDataToServer(
+                                Message(
+                                    messageValidator.getAmount(),
+                                    Timestamp(System.currentTimeMillis()).toString()
+                                )
+                            )
                         }
                     }
                 }

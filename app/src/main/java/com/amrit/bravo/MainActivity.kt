@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         checkPermission()
         mainViewModel.getDataFromServer()
         activityMainBinding.messageList.layoutManager = LinearLayoutManager(this)
+        activityMainBinding.messageList.isNestedScrollingEnabled = false
     }
 
     private fun setUi(dataList: List<Message>) {
@@ -86,4 +87,5 @@ class MainActivity : AppCompatActivity() {
             }, 2000)
         }
     }
+
 }
