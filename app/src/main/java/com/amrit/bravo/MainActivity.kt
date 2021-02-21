@@ -47,9 +47,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUi(dataList: List<Message>) {
+        if (dataList.isNotEmpty()) {
+            activityMainBinding.title.text = resources.getString(R.string.txt_round_ups)
+        } else {
+            activityMainBinding.title.text = resources.getString(R.string.txt_no_round_ups)
+        }
         if (activityMainBinding.messageList.adapter == null) {
             // first time create new adapter
-            activityMainBinding.title.text = resources.getString(R.string.txt_round_ups)
             activityMainBinding.messageList.adapter = MessageAdapter(dataList)
         } else {
             // other times reuse old adapter and update data
