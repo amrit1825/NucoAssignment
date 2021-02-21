@@ -1,6 +1,6 @@
 # NucoAssignment
 
-Android App to save sms with date and amount to firebase. Data will be shown on screen with amount and time stamp.
+Android App to save date and amount from sms to firebase. Data will be shown on screen with amount and time stamp.
 
 Assumptions:
 
