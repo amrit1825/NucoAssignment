@@ -47,7 +47,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUi(dataList: List<Message>) {
-        activityMainBinding.messageList.adapter = MessageAdapter(dataList)
+        if (activityMainBinding.messageList.adapter == null) {
+            // first time create new adapter
+            activityMainBinding.title.text = resources.getString(R.string.txt_round_ups)
+            activityMainBinding.messageList.adapter = MessageAdapter(dataList)
+        } else {
+            // other times reuse old adapter and update data
+            val adapter = (activityMainBinding.messageList.adapter as MessageAdapter)
+            adapter.updateMessageList(dataList)
+            adapter.notifyDataSetChanged()
+        }
     }
 
     private fun checkPermission() {
@@ -81,6 +90,7 @@ class MainActivity : AppCompatActivity() {
         if (requestCode == SMS_PERMISSION_CODE && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             Toast.makeText(this, R.string.txt_thank_you, Toast.LENGTH_SHORT).show()
         } else {
+            // closing app if permission is not granted
             Toast.makeText(this, R.string.txt_work, Toast.LENGTH_SHORT).show()
             Handler(Looper.getMainLooper()).postDelayed({
                 onBackPressed()

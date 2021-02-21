@@ -15,6 +15,7 @@ const val PDU_TYPE = "pdus"
 
 class MessageReceiver : BroadcastReceiver() {
 
+    // will receive sms intent here. And will save to server according to MessageValidator.
     override fun onReceive(context: Context?, intent: Intent) {
         val bundle = intent.extras
         val smsList: Array<SmsMessage?>
@@ -46,6 +47,7 @@ class MessageReceiver : BroadcastReceiver() {
         }
     }
 
+    // method to save message on server
     private fun writeDataToServer(message: Message) {
         val myRef = Firebase.database.getReference("user1")
         myRef.push().setValue(message).addOnSuccessListener {

@@ -15,6 +15,7 @@ class MainViewModel : ViewModel() {
     private val messageList = MutableLiveData<List<Message>>()
 
     fun getDataFromServer() {
+        // method to get data from server when ever there is any update
         val myRef: DatabaseReference = Firebase.database.getReference("user1")
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {

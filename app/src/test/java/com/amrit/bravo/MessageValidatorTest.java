@@ -20,7 +20,7 @@ public class MessageValidatorTest {
 
     @Test
     public void hasDateTest() {
-        // Considering Indian date notation.
+        // Considering Indian date notation dd-mm-yy and dd-mm-yyyy
         Truth.assertThat(messageValidator.hasDate("Hello 01-01-2021")).isTrue();
         Truth.assertThat(messageValidator.hasDate("Hello 10-10-2021")).isTrue();
         Truth.assertThat(messageValidator.hasDate("Hello 31-10-21")).isTrue();
@@ -29,7 +29,7 @@ public class MessageValidatorTest {
 
     @Test
     public void doesNotHasDateTest() {
-        // Considering Indian date notation.
+        // Considering Indian date notation dd-mm-yy and dd-mm-yyyy with day from 01 to 31, month from 01-12
         Truth.assertThat(messageValidator.hasDate("Hello 01/01/2021")).isFalse();
         Truth.assertThat(messageValidator.hasDate("Hello 32-02-2021")).isFalse();
         Truth.assertThat(messageValidator.hasDate("Hello 31-13-2021")).isFalse();
@@ -54,4 +54,5 @@ public class MessageValidatorTest {
     public void cleanUp() {
         messageValidator = null;
     }
+
 }
